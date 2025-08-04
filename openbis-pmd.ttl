@@ -1,0 +1,28 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix openbis: <http://purl.org/openbis/ontology#> .
+@prefix pmdco: <https://materialdigital.github.io/core-ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/openbis/ontology/extended#> a owl:Ontology ;
+    owl:imports pmdco: .
+
+# =================================================================
+# Alignments between OpenBIS-Ontology and PMDco
+# =================================================================
+
+### Example Alignments (replace with your actual alignments)
+
+openbis:Experiment rdfs:subClassOf pmdco:Process .
+
+openbis:Sample rdfs:subClassOf pmdco:Material .
+
+openbis:Instrument rdfs:subClassOf pmdco:Device .
+
+openbis:DataSet rdfs:subClassOf pmdco:Result .
+
+# Add more alignments below this line after reviewing the full ontologies
+# For example:
+# openbis:SomeOtherClass rdfs:subClassOf pmdco:AnotherClass .
+# openbis:hasSomeProperty rdfs:subPropertyOf pmdco:hasAnotherProperty .
