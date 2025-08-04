@@ -11,8 +11,10 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://w3id.org/matolab/openbis/> .
+@prefix pmdco: <https://materialdigital.github.io/core-ontology/> .
 
-<http://w3id.org/matolab/openbis> rdf:type owl:Ontology ;
+<http://w3id.org/matolab/openbis> rdf: type owl: Ontology ;  
+                                   owl:imports pmdco: ;
                                    owl:versionIRI <http://w3id.org/matolab/openbis/1.0.0> ;
                                    dc:contributor "Andre Valdestilhas (Bundesanstalt für Materalprüfung und -forschung BAM)"@en ,
                                                   "Mariam Rizkallah (Fraunhofer IFAM)"@en ,
@@ -28,6 +30,25 @@
                                    vann:preferredNamespaceUri "http://w3id.org/matolab/openbis" ;
                                    rdfs:comment "This is a simple Ontology expaining the data model of OpenBIS."@en ;
                                    owl:versionInfo "1.0.0"@en .
+
+# =================================================================
+# Alignments between OpenBIS-Ontology and PMDco
+# =================================================================
+
+### Example Alignments (replace with your actual alignments)
+
+:Experiment rdfs:subClassOf pmdco:Process .
+
+:Sample rdfs:subClassOf pmdco:Material .
+
+:Instrument rdfs:subClassOf pmdco:Device .
+
+:DataSet rdfs:subClassOf pmdco:Result .
+
+# Add more alignments below this line after reviewing the full ontologies
+# For example:
+# openbis:SomeOtherClass rdfs:subClassOf pmdco:AnotherClass .
+# openbis:hasSomeProperty rdfs:subPropertyOf pmdco:hasAnotherProperty .
 
 #################################################################
 #    Annotation properties
